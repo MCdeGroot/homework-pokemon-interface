@@ -69,16 +69,14 @@ public class ElectricPokemon extends Pokemon {
         System.out.println(name.getName() + " attacks " + enemy.getName() + " with his Thunder!");
         switch (enemy.getType()) {
             case "electric" -> {
-                System.out.println(enemy.getName() + " loses 10 hp");
-                enemy.setHp((enemy.getHp() - 10));
-                System.out.println("The thunder drains some hp from " + enemy.getName() + " to " + name.getName());
+                System.out.println("I'm wondering that is what he wanted. The thunder adds some hp to himself but also to his enemy" + enemy.getName() + "!");
                 name.setHp(name.getHp()+10);
+                enemy.setHp(enemy.getHp()+10);
             }
             case "fire", "grass" -> {
                 System.out.println(enemy.getName() + " loses 15 hp");
                 enemy.setHp((enemy.getHp() - 15));
                 System.out.println("The thunder drains some hp from " + enemy.getName() + " to " + name.getName());
-                name.setHp(name.getHp()+15);
             }
             case "water" -> {
                 System.out.println(enemy.getName() + " loses 20 hp");
