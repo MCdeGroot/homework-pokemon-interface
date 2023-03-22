@@ -1,6 +1,6 @@
 import java.security.PublicKey;
 
-public class Pokemon {
+public abstract class Pokemon {
 
     // dit wordt abstracte Super class
     //eerst gaan we hier alle standaard variabelen toevoegen die iedere Pokemon moet worden gedeclareerd.
@@ -11,16 +11,17 @@ public class Pokemon {
     private int hp;//Dit is de enige niet final variabele
     private final String food;
     private final String sound;
+
     private String type;
 
-
-    public Pokemon(String name, int level, int hp, String food, String sound){
+    public Pokemon(String name, int level, int hp, String food, String sound) {
         this.name = name;
         this.level = level;
         this.hp = hp;
         this.food = food;
         this.sound = sound;
     }
+
     public String getName() {
         return name;
     }
@@ -32,6 +33,9 @@ public class Pokemon {
     public int getHp() {
         return hp;
     }
+    public void setHp(int hp) {
+        this.hp = hp;
+    }
 
     public String getFood() {
         return food;
@@ -41,11 +45,9 @@ public class Pokemon {
         return sound;
     }
 
-    public String getType() {
+    public String getType(){
         return type;
     }
 
-    public void setHp(int hp) {
-        this.hp = hp;
-    }
 }
+
